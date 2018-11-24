@@ -1,6 +1,12 @@
 # Local/private config goes in the include
 [include]
         path = ~/.gitconfig.local
+[user]
+	name = Matt Rothstein
+	email = matt@getfinal.com
+	signingkey = 5274D790
+[github]
+	user = marothstein
 [hub]
         protocol = https
 [alias]
@@ -9,6 +15,8 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
         count   = !git shortlog -sn
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	conflicts = !git ls-files -u | cut -f 2 | sort -u
 [color]
         diff = auto
         status = auto
@@ -30,4 +38,14 @@
         # for more information on different options of the below setting.
         #
         # Setting to git 2.0 default to suppress warning message
-        default = simple
+	default = simple
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[credential]
+	helper = osxkeychain
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2
