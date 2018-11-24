@@ -22,6 +22,7 @@ brew 'spark'
 brew 'unrar'
 brew 'wget'
 brew 'yarn'
+brew 'todo-txt'
 
 cask 'atom'
 cask 'firefox'
