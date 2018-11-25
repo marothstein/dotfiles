@@ -5,7 +5,7 @@
 export TODO_DIR=$(dirname "$0")
 # To enable storing the text files in a different git repository 
 # than the configuration.
-export TODO_FILES_DIR="$HOME/.todo.files.d"
+export TODO_FILES_DIR="$HOME/.todo.texts.d"
 
 # Your todo/done/report.txt locations
 export TODO_FILE="$TODO_FILES_DIR/todo.txt"
