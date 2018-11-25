@@ -1,0 +1,3 @@
+[submodule "todo.symlink"]
+	path = todo.symlink
+	url = https://github.com/marothstein/.todo.git
